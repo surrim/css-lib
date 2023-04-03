@@ -1,0 +1,25 @@
+{
+  "name": "surrim/css-lib",
+  "description": "Library for creating CSS with PHP",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "surrim",
+      "email": "root@surrim.org",
+      "homepage": "https://surrim.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Surrim\\CssLib\\": "src"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=8.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10"
+  }
+}
