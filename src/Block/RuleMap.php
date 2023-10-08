@@ -59,13 +59,13 @@ class RuleMap {
       $css .= "\n";
       foreach ($this->rules as $property => $value) {
         $pValue = self::prettyRuleValue($value, "$tabs  ");
-        $css .= "$tabs  $property: $pValue;\n";
+        $css .= "$tabs  $property:$pValue;\n";
       }
       $css .= "$tabs";
     } else {
       foreach ($this->rules as $property => $value) {
         $pValue = self::prettyRuleValue($value, $tabs);
-        $css .= " $property: $pValue;";
+        $css .= " $property:$pValue;";
       }
       $css .= " ";
     }
@@ -77,7 +77,7 @@ class RuleMap {
     if (str_contains($value, "\n")) {
       return "\n$tabs  " . strtr($value, ["\n" => "\n$tabs  "]);
     }
-    return "$value";
+    return " $value";
   }
 
   public function merge(RuleMap $ruleMap): void {
